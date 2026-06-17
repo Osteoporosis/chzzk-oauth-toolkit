@@ -1,0 +1,17 @@
+[project]
+name = "chzzk-oauth-toolkit"
+version = "0.1.0"
+description = "Minimal standard-library OAuth toolkit for the CHZZK Open API"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+chzzk-oauth = "chzzk_oauth.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["chzzk_oauth"]
