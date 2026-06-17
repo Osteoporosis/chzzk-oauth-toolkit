@@ -1,0 +1,38 @@
+{
+  "name": "chzzk-oauth-toolkit",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "features": {
+    "ghcr.io/va-h/devcontainers-features/uv:1": {
+      "shellautocompletion": true,
+      "version": "latest"
+    }
+  },
+  "workspaceFolder": "/workspaces/chzzk-oauth-toolkit",
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+        "python.terminal.activateEnvironment": true,
+        "ruff.nativeServer": "on"
+      }
+    }
+  },
+  "containerEnv": {
+    "UV_LINK_MODE": "copy",
+    "UV_PYTHON": "3.11"
+  },
+  "postCreateCommand": "uv sync",
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "CHZZK OAuth Callback",
+      "onAutoForward": "notify"
+    }
+  }
+}
