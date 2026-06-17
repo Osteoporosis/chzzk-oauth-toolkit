@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# uv
+uv.lock
+
+# Build artifacts
+build/
+dist/
+
+# Local secrets
+.env
+.chzzk_tokens.json
+.chzzk_state
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
